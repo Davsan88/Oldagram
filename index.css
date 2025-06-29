@@ -6,7 +6,7 @@
 
 body {
     font-family: "Source Sans 3", sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: #252525;
     text-align: center;
 }
@@ -14,14 +14,22 @@ body {
 /* == typography == */
 
 .bold {
-    font-weight: 900;
+    font-weight: 800;
+}
+
+.lg-text {
     font-size: 1.5rem;
+}
+
+.comments span {
+    font-size: 1.4rem;
 }
 
 /* == images == */
 
 .logo {
-   width: 250px; 
+    width: 100%;
+    max-width: 250px; 
 }
 
 .avatar {
@@ -59,7 +67,17 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 15px;
+}
+
+.name-location p {
+    line-height: 1.2;
+}
+
+
+.name-location {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
 }
 
 .post-interactions {
