@@ -48,6 +48,12 @@ body {
     margin-right: 25px;
 }
 
+.icon:hover,
+.icon:focus {
+    cursor: pointer;
+    opacity: 0.4;
+}
+
 /* == layout == */
 
 .container {
@@ -72,7 +78,6 @@ body {
 .name-location p {
     line-height: 1.2;
 }
-
 
 .name-location {
     display: flex;
