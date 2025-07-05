@@ -31,9 +31,9 @@ const posts = [
 
 const feedContainer = document.querySelector('.feed')
 
-const likesCount = document.querySelector('.likes')
 
-console.log(likesCount)
+
+
 
 const renderFeed = (posts) => {
     let newInnerHTML = ""
@@ -53,7 +53,9 @@ const renderFeed = (posts) => {
 
             <div class="container post-interactions">
                 <div class="icons-div">
+                    <button type="button">
                         <img class="icon" src="images/icon-heart.png" alt="Like">
+                    </button>        
                         <img class="icon" src="images/icon-comment.png" alt="Comment">
                         <img class="icon" src="images/icon-dm.png" alt="Share">
                 </div>
@@ -68,3 +70,9 @@ const renderFeed = (posts) => {
 }
 
 renderFeed(posts)
+
+
+
+
+const likesCount = document.querySelectorAll('.likes')
+console.log(likesCount)
