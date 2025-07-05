@@ -31,10 +31,8 @@ const posts = [
 
 const feedContainer = document.querySelector('.feed')
 
-console.log('feedContainer')
-
 const renderFeed = (posts) => {
-    const newInnerHTML = []
+    let newInnerHTML = ""
 
     posts.forEach((post) => {
         newInnerHTML += `
@@ -56,13 +54,13 @@ const renderFeed = (posts) => {
                         <img class="icon" src="images/icon-dm.png" alt="Share">
                 </div>
                     <p class="likes bold lg-text">${post.likes}</p>
-                    <p class="comments"><span class="bold lg-text">${post.comment}> just took a few mushrooms lol</p>
+                    <p class="comments"><span class="bold lg-text">${post.username}</span> ${post.comment}</p>
             </div>
         </article>
-            `
+        `
     })
-
-    postContainer.innerHTML = newInnerHTML
+    
+    feedContainer.innerHTML = newInnerHTML
 }
 
-renderFeed()
+renderFeed(posts)
