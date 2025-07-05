@@ -31,12 +31,16 @@ const posts = [
 
 const feedContainer = document.querySelector('.feed')
 
+const likesCount = document.querySelector('.likes')
+
+console.log(likesCount)
+
 const renderFeed = (posts) => {
     let newInnerHTML = ""
 
     posts.forEach((post) => {
         newInnerHTML += `
-        <article class="post">
+        <article class="container post">
             <div class="container post-header">
                 <img class="avatar" src="${post.avatar}" alt="Portrait of ${post.name}">
                 <div class="name-location">
@@ -45,7 +49,7 @@ const renderFeed = (posts) => {
                 </div>
             </div>
 
-            <img class="post-img" src="${post.post}" alt="Portrait of ${post.name}">
+            <img class="container post-img" src="${post.post}" alt="Portrait of ${post.name}">
 
             <div class="container post-interactions">
                 <div class="icons-div">
