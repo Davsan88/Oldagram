@@ -53,7 +53,7 @@ const renderFeed = (posts) => {
 
             <div class="container post-interactions">
                 <div class="icons-div">
-                        <img class="icon likes-img" src="images/icon-heart.png" alt="Like">
+                        <img data-index=${index} class="icon likes-img" src="images/icon-heart.png" alt="Like">
                         <img class="icon" src="images/icon-comment.png" alt="Comment">
                         <img class="icon" src="images/icon-dm.png" alt="Share">
                 </div>
@@ -72,20 +72,25 @@ renderFeed(posts)
 
 
 
-const likesImg = document.querySelectorAll('likes-img')
-const likesCount = document.querySelectorAll('likes-count')
+const likesImg = document.querySelectorAll('.likes-img')
+const likesCount = document.querySelectorAll('.likes-count')
 
 console.log(likesCount)
 
 likesImg.forEach((image) => {
     image.addEventListener("click", function(){
-        const postIndex = image.dataset.index
+        if (likesImg.data.index != likesCount.data.index) return
+        
+        // const imageIndex = image.dataset.index
+        // const postIndex = image.dataset.index
+        
         let newCount = likesCount.textContent
     
         newCount += 1
     
         likesCount.textContent = newCount
     
+    renderFeed(posts)
     })
 
 })
