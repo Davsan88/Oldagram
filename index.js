@@ -38,7 +38,7 @@ const feedContainer = document.querySelector('.feed')
 const renderFeed = (posts) => {
     let newInnerHTML = ""
 
-    posts.forEach((post) => {
+    posts.forEach((post, index) => {
         newInnerHTML += `
         <article class="container post">
             <div class="container post-header">
@@ -53,13 +53,11 @@ const renderFeed = (posts) => {
 
             <div class="container post-interactions">
                 <div class="icons-div">
-                    <button type="button">
-                        <img class="icon" src="images/icon-heart.png" alt="Like">
-                    </button>        
+                        <img class="icon likes-img" src="images/icon-heart.png" alt="Like">
                         <img class="icon" src="images/icon-comment.png" alt="Comment">
                         <img class="icon" src="images/icon-dm.png" alt="Share">
                 </div>
-                    <p class="likes bold lg-text">${post.likes}</p>
+                    <p data-index=${index} class="likes likes-count bold lg-text">${post.likes}</p>
                     <p class="comments"><span class="bold lg-text">${post.username}</span> ${post.comment}</p>
             </div>
         </article>
@@ -74,5 +72,22 @@ renderFeed(posts)
 
 
 
-const likesCount = document.querySelectorAll('.likes')
+const likesImg = document.querySelectorAll('likes-img')
+const likesCount = document.querySelectorAll('likes-count')
+
 console.log(likesCount)
+
+likesImg.forEach((image) => {
+    image.addEventListener("click", function(){
+        const postIndex = image.dataset.index
+        let newCount = likesCount.textContent
+    
+        newCount += 1
+    
+        likesCount.textContent = newCount
+    
+    })
+
+})
+
+
