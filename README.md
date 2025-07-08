@@ -69,3 +69,20 @@ Here’s what I might add in future iterations:
 
 ---
 
+## ✅ Why I’m Proud
+
+Oldagram started as a solo practice challenge and turned into a small but dynamic project. I deepened my understanding of vanilla JavaScript, DOM relationships, and how to approach features like interactivity from scratch.
+It might seem simple, but it reflects real-world patterns in component rendering and event-driven interfaces. I learned a lot by pushing past the “course version” and exploring what more I could build.
+
+---
+
+🌐 Live Demo
+
+Check out the live version here: [https://oldagramdavsan.netlify.app/](https://oldagramdavsan.netlify.app/)
+
+---
+
+## 📫 Contact
+
+Got feedback or questions?
+📩 **david.sanchez.martinez@outlook.com**
