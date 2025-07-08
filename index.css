@@ -46,6 +46,12 @@ body {
     max-width: 100%;
 }
 
+.button {
+    background-color: white;
+    border: none;
+    text-decoration: none;
+}
+
 .icon {
     width: 3rem;
     height: auto;

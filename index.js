@@ -29,14 +29,17 @@ const posts = [
 ]
 
 
+// Selects the container element where the posts will be rendered
 const feedContainer = document.querySelector('.feed')
 
+// Renders all posts from the provided array of post objects
 const renderFeed = (posts) => {
     let newInnerHTML = ""
 
+    // Loop through each post object and build its HTML markup
     posts.forEach((post) => {
         newInnerHTML += `
-        <article class="post">
+        <article class="container post">
             <div class="container post-header">
                 <img class="avatar" src="${post.avatar}" alt="Portrait of ${post.name}">
                 <div class="name-location">
@@ -45,22 +48,47 @@ const renderFeed = (posts) => {
                 </div>
             </div>
 
-            <img class="post-img" src="${post.post}" alt="Portrait of ${post.name}">
+            <img class="container post-img" src="${post.post}" alt="Portrait of ${post.name}">
 
             <div class="container post-interactions">
                 <div class="icons-div">
-                        <img class="icon" src="images/icon-heart.png" alt="Like">
+                        <img  class="icon likes-img" src="images/icon-heart.png" alt="Like">
                         <img class="icon" src="images/icon-comment.png" alt="Comment">
                         <img class="icon" src="images/icon-dm.png" alt="Share">
                 </div>
-                    <p class="likes bold lg-text">${post.likes}</p>
+                    <p  class="likes likes-count bold lg-text">${post.likes}</p>
                     <p class="comments"><span class="bold lg-text">${post.username}</span> ${post.comment}</p>
             </div>
         </article>
         `
     })
-    
+
+    // Inject the built HTML into the DOM
     feedContainer.innerHTML = newInnerHTML
 }
 
+// Initial rendering of posts
 renderFeed(posts)
+
+
+// Select all like buttons and their corresponding like counters
+const likesImg = document.querySelectorAll('.likes-img')
+const likesCount = document.querySelectorAll('.likes-count')
+
+// Debug: log all like counter elements
+console.log(likesCount)
+
+// Attach a click event to each like button
+likesImg.forEach((image, index) => {
+    image.addEventListener("click", function () {
+        const postIndex = likesCount[index]
+
+        // Increment the like count and update the text content
+        let newCount = parseInt(postIndex.textContent)
+        newCount += 1
+        postIndex.textContent = newCount
+    })
+})
+
+
+
