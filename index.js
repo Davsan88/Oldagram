@@ -29,16 +29,15 @@ const posts = [
 ]
 
 
+// Selects the container element where the posts will be rendered
 const feedContainer = document.querySelector('.feed')
 
-
-
-
-
+// Renders all posts from the provided array of post objects
 const renderFeed = (posts) => {
     let newInnerHTML = ""
 
-    posts.forEach((post, index) => {
+    // Loop through each post object and build its HTML markup
+    posts.forEach((post) => {
         newInnerHTML += `
         <article class="container post">
             <div class="container post-header">
@@ -64,34 +63,32 @@ const renderFeed = (posts) => {
         `
     })
 
+    // Inject the built HTML into the DOM
     feedContainer.innerHTML = newInnerHTML
 }
 
+// Initial rendering of posts
 renderFeed(posts)
 
 
+// Select all like buttons and their corresponding like counters
 const likesImg = document.querySelectorAll('.likes-img')
 const likesCount = document.querySelectorAll('.likes-count')
 
+// Debug: log all like counter elements
 console.log(likesCount)
 
+// Attach a click event to each like button
 likesImg.forEach((image, index) => {
     image.addEventListener("click", function () {
-        // const imageIndex = image[index]
         const postIndex = likesCount[index]
 
-        // if (image != postIndex) return
-        
+        // Increment the like count and update the text content
         let newCount = parseInt(postIndex.textContent)
-        
         newCount += 1
-        
         postIndex.textContent = newCount
-        console.log(postIndex.textContent)
-
-        // renderFeed(posts)
     })
-
 })
+
 
 
