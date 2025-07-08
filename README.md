@@ -27,3 +27,25 @@ Originally a basic DOM manipulation challenge, I decided to expand it into a ful
 
 ---
 
+## 📚 Features Covered
+
+- Template rendering via string interpolation
+- DOM selection and manipulation
+- Event handling with `addEventListener`
+- Array iteration with `forEach`
+- Using `querySelectorAll` for batch interactions
+- Keeping logic clean and scalable without external dependencies
+
+---
+
+## 💡 Skills Practiced
+
+- Creating reusable rendering logic
+- Structuring components semantically
+- Debugging with browser tools and console logs
+- Thinking through data-driven UI updates
+- Understanding how event delegation and node indexing work
+- Balancing simplicity and functionality in vanilla JS projects
+
+---
+
