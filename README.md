@@ -9,3 +9,21 @@ Originally a basic DOM manipulation challenge, I decided to expand it into a ful
 
 ---
 
+## 🚀 What It Does
+
+- ✅ Dynamically renders a series of photo posts from a JS object array
+- ✅ Shows avatars, images, usernames, locations, likes, and comments
+- ✅ Lets users click a heart icon to increase the like count per post
+- ✅ Clean layout and responsive design using Flexbox
+- ✅ Built entirely with semantic HTML and modular CSS classes
+
+---
+
+## 🛠️ Technologies Used
+
+- **HTML5** – Markup for structure and accessibility
+- **CSS3** – Layout and responsive styling with Flexbox
+- **JavaScript (ES6)** – Dynamic rendering, event handling, DOM manipulation
+
+---
+
