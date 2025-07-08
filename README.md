@@ -49,3 +49,23 @@ Originally a basic DOM manipulation challenge, I decided to expand it into a ful
 
 ---
 
+## 🧪 How to Use
+
+- Open the HTML file in your browser
+- Scroll through the posts to enjoy the feed
+- Click the heart icon under any post to like it — the count updates instantly!
+
+---
+
+## 🏗️ Possible Next Steps
+
+Here’s what I might add in future iterations:
+
+- ⏳ Add timestamps for posts -
+- 🗨️ Include comment input and display functionality
+- 📱 Improve responsiveness for smaller screens
+- ❤️ Toggle likes (add/remove) per user click
+- 🧩 Refactor to render posts with createElement for more control
+
+---
+
